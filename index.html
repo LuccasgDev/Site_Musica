@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escola de Música Parque Jerusalém</title>
+</head>
+<body>
+
+    <section id="cadastro">
+        <h2>Cadastro</h2>
+        <form id="formCadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" required>
+
+            <label for="instrumento">Qual instrumento você deseja aprender?</label>
+            <select id="instrumento" required>
+                <option value="">Selecione</option>
+                <option value="violao">Violão</option>
+                <option value="baixo">Baixo</option>
+                <option value="bateria">Bateria</option>
+                <option value="flauta">Flauta</option>
+                <option value="violino">Violino</option>
+                <option value="trombone">Trombone</option>
+                <option value="trompete">Trompete</option>
+                <option value="clarinete">Clarinete</option>
+                <option value="sax alto">Sax Alto</option>
+            </select>
+
+            <!-- Campo para instrumentos adicionais -->
+            <div id="instrumentosAdicionais"></div>
+
+            <!-- Botão de adicionar instrumentos -->
+            <div id="adicionalInstrumentos">
+                <label>Deseja adicionar mais algum instrumento?</label>
+                <button type="button" id="btnAdicionar">Adicionar Instrumento</button>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy;Desenvolvido por Oringin Tech</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
