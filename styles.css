@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
-    background-image: url('https://static.wixstatic.com/media/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png/v1/fit/w_2500,h_1330,al_c/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png');
+    background-image: 
+        url('https://static.wixstatic.com/media/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png/v1/fit/w_2500,h_1330,al_c/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png'),
+        linear-gradient(to bottom right, rgba(255, 234, 0, 0.5), rgba(255, 87, 34, 0.5));
     background-size: cover; /* Cobre toda a tela */
     background-position: center; /* Centraliza a imagem de fundo */
     display: flex;
@@ -14,16 +15,17 @@ body {
 section {
     padding: 20px;
     margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9); /* Leve transparência no fundo do formulário */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semitransparente */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 90%; /* Ajusta a largura para dispositivos móveis */
     flex-grow: 1;
+    border: 2px solid rgba(255, 234, 0, 0.8); /* Borda amarela com opacidade */
 }
 
 h2 {
-    color: #333;
+    color: rgba(255, 87, 34, 0.9); /* Título em um tom de laranja queimado com opacidade */
     text-align: center;
     margin: 20px 0;
 }
@@ -35,6 +37,7 @@ form {
 
 form label {
     margin: 10px 0 5px;
+    color: #333;
 }
 
 form input, form select, form button {
@@ -45,15 +48,19 @@ form input, form select, form button {
     box-sizing: border-box;
 }
 
+form input:focus, form select:focus {
+    border-color: rgba(255, 87, 34, 0.9); /* Bordas em um tom de laranja ao focar */
+}
+
 form button {
-    background: #333;
+    background: rgba(255, 87, 34, 0.9); /* Botão em um tom de laranja queimado com opacidade */
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background: #555;
+    background: rgba(255, 234, 0, 0.9); /* Amarelo ao passar o mouse com opacidade */
 }
 
 #instrumentosAdicionais {
@@ -76,8 +83,8 @@ form button:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background: rgba(255, 87, 34, 0.9); /* Fundo do footer em um tom escuro de laranja queimado com opacidade */
+    color: white;
     width: 100%;
     margin-top: auto;
 }
