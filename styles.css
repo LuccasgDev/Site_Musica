@@ -2,34 +2,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: 
-        url('https://static.wixstatic.com/media/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png/v1/fit/w_2500,h_1330,al_c/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png'),
-        linear-gradient(to bottom right, rgba(255, 234, 0, 0.5), rgba(255, 87, 34, 0.5));
-    background-size: cover; /* Cobrir toda a tela */
-    background-position: center; /* Centralizar a imagem de fundo */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    background-image: url('https://static.wixstatic.com/media/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png/v1/fit/w_2500,h_1330,al_c/a29ff5_96a06cfe9acf468bb994dc8e51ce006c~mv2.png');
+    background-size: cover; /* Cobre toda a tela */
+    background-position: center; /* Centraliza a imagem de fundo */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    align-items: center;
 }
 
 section {
     padding: 20px;
     margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco semitransparente */
+    background: rgba(255, 255, 255, 0.9); /* Leve transparência no fundo do formulário */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    width: 100%;
+    width: 90%; /* Ajusta a largura para dispositivos móveis */
     flex-grow: 1;
-    border: 2px solid rgba(255, 234, 0, 0.8); /* Borda amarela com opacidade */
 }
 
 h2 {
-    color: rgba(255, 87, 34, 0.9); /* Título em um tom de laranja queimado com opacidade */
+    color: #333;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 form {
@@ -39,7 +35,6 @@ form {
 
 form label {
     margin: 10px 0 5px;
-    color: #333;
 }
 
 form input, form select, form button {
@@ -50,58 +45,56 @@ form input, form select, form button {
     box-sizing: border-box;
 }
 
-form input:focus, form select:focus {
-    border-color: rgba(255, 87, 34, 0.9); /* Bordas em um tom de laranja ao focar */
-}
-
 form button {
-    background: rgba(255, 87, 34, 0.9); /* Botão em um tom de laranja queimado com opacidade */
+    background: #333;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background: rgba(255, 234, 0, 0.9); /* Amarelo ao passar o mouse com opacidade */
+    background: #555;
 }
 
 #instrumentosAdicionais {
-    margin-top: 5px; /* Reduzido o espaço acima do campo de instrumentos adicionais */
+    margin-top: 5px;
 }
 
-.instrumento-container {
-    margin-bottom: 10px; /* Adiciona espaço entre os instrumentos adicionais */
-}
-
-.btn-remover {
-    margin-left: 10px; /* Adiciona espaço à esquerda do botão remover */
-    background: rgba(244, 67, 54, 0.9); /* Botão vermelho para remover com opacidade */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 10px; /* Padding para o botão remover */
-    transition: background-color 0.3s;
-}
-
-.btn-remover:hover {
-    background: rgba(198, 40, 40, 0.9); /* Vermelho mais escuro ao passar o mouse com opacidade */
+.instrumento-adicional {
+    margin-top: 5px;
 }
 
 #adicionalInstrumentos {
-    margin-top: 10px; /* Ajustado para ficar mais próximo do campo de instrumentos */
-    margin-bottom: 10px; /* Adicionando espaço abaixo do contêiner */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #adicionalInstrumentos label {
-    margin-bottom: 5px; /* Adicionando margem abaixo da label */
+    margin-bottom: 5px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background: rgba(255, 87, 34, 0.9); /* Fundo do footer em um tom escuro de laranja queimado com opacidade */
-    color: white;
+    background: #333;
+    color: #fff;
     width: 100%;
     margin-top: auto;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+    section {
+        margin: 10px; /* Margem menor em dispositivos móveis */
+        padding: 15px; /* Menos padding em dispositivos móveis */
+        width: 95%; /* Aumenta a largura em dispositivos móveis */
+    }
+
+    form input, form select, form button {
+        font-size: 16px; /* Aumenta o tamanho da fonte para melhor legibilidade */
+    }
+
+    h2 {
+        font-size: 24px; /* Ajusta o tamanho do título em dispositivos móveis */
+    }
 }
